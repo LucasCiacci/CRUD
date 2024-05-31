@@ -39,7 +39,7 @@ class Usuarios {
         $stmt->bindParam(':email', $email);
 
         $sha1 = sha1($senha); //sha1 para a senha
-        $stmt->bindParam(':senha', $senha);
+        $stmt->bindParam(':senha', $sha1);
 
         $stmt->execute(); //executando
 
@@ -59,7 +59,7 @@ class Usuarios {
         $stmt->bindParam(':email', $email);
         
         $sha1 = sha1($senha); //sha1 para a senha
-        $stmt->bindParam(':senha', $senha);
+        $stmt->bindParam(':senha', $sha1);
         
         $stmt->execute(); //executando
 

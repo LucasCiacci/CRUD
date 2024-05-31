@@ -15,13 +15,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Listar Usuarios</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="tabela.css">
     </head>
     <body>
+    
     <main>
-        <p>
-            <a href="cadastro.php">Cadastrar Novo Usuário</a><br>
-        </p>
+        <h2><a href="cadastro.php">Cadastrar Novo Usuário</a></h2><br>
+    </main>
+        
         <caption>Listagem de Usuarios</caption>
         <table border="1">
             <tr>
@@ -37,13 +38,18 @@
                     <td><?= $pessoa['nome'] ?></td>
                     <td><?= $pessoa['email'] ?></td>
                     <td><?= $pessoa['senha'] ?></td>
-                    <td><a href=""></a></td>
-                    <td><a href=""></a></td>
+                    <td>
+                        <a href="">Editar</a>
+                    </td>
+                    <td>
+                        <a href="infoDeletar.php?id">Excluir</a>
+                    </td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
-    </main>
+        
+        
     </body>
     </html>
 
