@@ -39,10 +39,10 @@
                     <td><?= $pessoa['email'] ?></td>
                     <td><?= $pessoa['senha'] ?></td>
                     <td>
-                        <a href="">Editar</a>
+                        <a href="atualizar.php?id=<?= $pessoa['id']; ?>">Editar</a>
                     </td>
                     <td>
-                        <a href="infoDeletar.php?id">Excluir</a>
+                        <a href="infoDeletar.php?id=<?= $pessoa['id']; ?>">Excluir</a>
                     </td>
                 </tr>
                 <?php endforeach; ?>

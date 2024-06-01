@@ -10,13 +10,13 @@
     <main>
         <h1>Cadastrar Usuário</h1>
         <form action="infoCadastro.php" method="post">
-            <label for="nome">Nome Completo</label>
+            <label for="nome">Nome Completo:</label>
             <input type="text" name="nome" id="idnome" required>
 
-            <label for="email">Email</label>
+            <label for="email">Email:</label>
             <input type="email" name="email" id="idemail" required>
 
-            <label for="senha">Senha</label>
+            <label for="senha">Senha:</label>
             <input type="password" name="senha" id="idsenha">
 
             <input type="submit" value="Cadastrar">
