@@ -1,3 +1,5 @@
+<!--Arquivo do Formulário do Cadastro-->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

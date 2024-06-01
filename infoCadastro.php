@@ -5,18 +5,24 @@
      
     $usuario = new Usuarios($pdo);
 
+    // Verifica se a requisição é POST
     if($_SERVER["REQUEST_METHOD"] == "POST"){
+        // Sanitiza e obtém os dados do formulário
         $nome = filter_input(INPUT_POST, "nome", FILTER_SANITIZE_SPECIAL_CHARS);
         $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
         $senha = filter_input(INPUT_POST, "senha", FILTER_SANITIZE_SPECIAL_CHARS);
-        
-    $cadastro = $usuario->inserir ($nome, $email, $senha);
+      
+        // Insere o novo usuário
+        $cadastro = $usuario->inserir ($nome, $email, $senha);
     
-    echo "Usuário cadastrado com sucesso!";
-}else{
-    echo "Algo errado ao cadastrar";
-}
+        echo "Usuário cadastrado com sucesso!";
+    }else{
+        echo "Algo errado ao cadastrar";
+    }
+
 ?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

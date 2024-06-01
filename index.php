@@ -5,6 +5,8 @@
     require_once("Usuarios.php");
 
     $usuario = new Usuarios($pdo);
+    
+    // Lista todos os usuários
     $lista = $usuario->listarTodos();
 
 ?>
@@ -42,7 +44,7 @@
                         <a href="atualizar.php?id=<?= $pessoa['id']; ?>">Editar</a>
                     </td>
                     <td>
-                        <a href="infoDeletar.php?id=<?= $pessoa['id']; ?>">Excluir</a>
+                        <a href="deletar.php?id=<?= $pessoa['id']; ?>">Excluir</a>
                     </td>
                 </tr>
                 <?php endforeach; ?>
